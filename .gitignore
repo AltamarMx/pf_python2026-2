@@ -1,0 +1,7 @@
+# Sistema
+.DS_Store
+
+# Datos de los proyectos: no se versionan.
+# Se ignora todo dentro de cada carpeta personal, excepto su NOMBRE.md
+/*/*
+!/*/*.md
