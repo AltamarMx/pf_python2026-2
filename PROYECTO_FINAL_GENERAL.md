@@ -2,7 +2,7 @@
 
 Estos lineamientos y la rúbrica son iguales para todos. Cada persona tiene una carpeta con su `NOMBRE.md`, que resume sus datos y el objetivo de su proyecto.
 
-Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 1 innovación justificada y una presentación de 15 min.
+Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 2 innovaciones justificadas y una presentación de 15 min.
 
 ## Estructura del espacio de trabajo (uv)
 
@@ -53,7 +53,7 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 
 ## Innovación
 
-Incluye al menos una herramienta o técnica que no se haya visto en el curso, **y justifícala**. En la presentación tienes que explicar qué problema resuelve en tu proyecto y por qué conviene más que lo visto en clase. Si eliges el tipado de funciones (*type hints*), debes saber explicar qué hace y qué no hace: Python no lo verifica al ejecutar; sirve para documentar, para el autocompletado del editor y para revisar el código con herramientas como `mypy` o `pyright`.
+Incluye al menos **dos** herramientas o técnicas que no se hayan visto en el curso, **y justifica cada una**. En la presentación tienes que explicar qué problema resuelve cada una en tu proyecto y por qué conviene más que lo visto en clase. Si eliges el tipado de funciones (*type hints*), debes saber explicar qué hace y qué no hace: Python no lo verifica al ejecutar; sirve para documentar, para el autocompletado del editor y para revisar el código con herramientas como `mypy` o `pyright`.
 
 ## Presentación (15 minutos)
 
@@ -62,7 +62,7 @@ La presentación trata de **las funciones**, no de la limpieza; la limpieza la r
 - 2 min: contexto y datos.
 - 7 min: la función (qué recibe, qué devuelve, demostración).
 - 3 min: resultados.
-- 2 min: innovación y su justificación.
+- 2 min: innovaciones y su justificación.
 - 1 min: cierre.
 
 Lleva la demostración ya ejecutada por si algo falla en vivo.
@@ -87,6 +87,6 @@ Si tus datos crudos son muy pesados, pregunta antes de entregar si van dentro de
 | Función | 25 | Corrección, docstring completo, validación del formato de entrada y reutilización con otro archivo del mismo formato | Repositorio + presentación |
 | Demostración de uso | 10 | `004_uso_<funcion>` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
 | Resultados propios | 15 | Al menos 2 figuras o tratamientos, cada uno con una conclusión | Repositorio + presentación |
-| Innovación | 10 | Herramienta o técnica nueva y su justificación verbal | Presentación |
+| Innovación | 10 | Dos herramientas o técnicas nuevas y la justificación verbal de cada una | Presentación |
 | Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
 | Presentación | 10 | Claridad, tiempo y respuestas a preguntas | Presentación |
