@@ -2,7 +2,7 @@
 
 Estos lineamientos y la rúbrica son iguales para todos. Cada persona tiene una carpeta con su `NOMBRE.md`, que resume sus datos y el objetivo de su proyecto.
 
-Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 2 innovaciones justificadas y una presentación de 15 min.
+Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, 3 resultados propios (2 figuras y 1 conjunto de datos), al menos 2 innovaciones justificadas y una presentación de 15 min.
 
 ## Fechas
 
@@ -20,13 +20,13 @@ pf_<nombre>/
 ├── data/
 │   ├── 001_raw/                # datos crudos, intactos
 │   ├── 002_intermediate/       # datos limpios (parquet), salida del ETL
-│   └── 003_results/            # tablas de resultados
+│   └── 003_results/            # conjunto de datos de resultados
 ├── img/                        # figuras exportadas (png/pdf)
 ├── notebooks/
 │   ├── 001_ETL.ipynb           # importación y limpieza
 │   ├── 002_EDA.ipynb           # figuras de verificación
 │   ├── 003_desarrollo_<funcion>.ipynb
-│   ├── 004_uso_<funcion>.ipynb # demostración de uso y resultados propios (mínimo 2)
+│   ├── 004_uso_<funcion>.ipynb # demostración de uso y los 3 resultados propios
 │   └── tools/
 │       ├── __init__.py
 │       └── <modulo>.py
@@ -51,10 +51,12 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 - Lleva un docstring completo (qué hace, parámetros, qué devuelve y un ejemplo) que se pueda ver con `help()` y con `Shift+Tab`.
 - Puede usar funciones auxiliares del mismo módulo. Lo importante es poder reutilizarla con **otro archivo del mismo formato**: otra corrida, otro año, otra muestra.
 
-## Figuras
+## Figuras y resultados
 
 - **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
-- **Figuras o tratamientos propios** (en `004_uso_<funcion>`): **al menos dos**, propuestos por ti, que den un resultado: un número, una comparación o una conclusión.
+- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti, cada uno con una conclusión (un número, una comparación o una afirmación):
+  - **2 figuras**, exportadas a `img/`.
+  - **1 conjunto de datos** producido con tu función, guardado en `data/003_results/`.
 
 ## Innovación
 
@@ -94,7 +96,7 @@ Antes de zipear, borra `.venv/`.
 | ETL y limpieza | 20 | `001_ETL` documentado, decisiones justificadas en Markdown, crudos intactos, datos limpios en `002_intermediate` | Repositorio |
 | Función | 25 | Corrección, docstring completo, validación del formato de entrada y reutilización con otro archivo del mismo formato | Repositorio + presentación |
 | Demostración de uso | 10 | `004_uso_<funcion>` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
-| Resultados propios | 15 | Al menos 2 figuras o tratamientos, cada uno con una conclusión | Repositorio + presentación |
+| Resultados propios | 15 | 2 figuras y 1 conjunto de datos, cada uno con una conclusión | Repositorio + presentación |
 | Innovación | 10 | Dos herramientas o técnicas nuevas y la justificación verbal de cada una | Presentación |
 | Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
 | Presentación | 10 | Claridad, tiempo y respuestas a las preguntas y al cuestionamiento sobre las funciones | Presentación |
