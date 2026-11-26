@@ -80,7 +80,7 @@ Tienes que conocer tu código lo suficiente para responder sin leerlo por primer
 
 Un zip del espacio de trabajo **sin `.venv/`**, que se sube al Drive del curso.
 
-Antes de zipear: borra `.venv/`, corre `uv sync` y ejecuta cada libreta con *Restart & Run All* para comprobar que todo se reproduce desde cero.
+Antes de zipear, borra `.venv/`.
 
 ## Rúbrica (60 % del curso, sobre 100)
 
