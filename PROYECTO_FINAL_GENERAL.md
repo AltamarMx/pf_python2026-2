@@ -78,12 +78,9 @@ Tienes que conocer tu código lo suficiente para responder sin leerlo por primer
 
 ## Entrega
 
-Un zip del espacio de trabajo **sin `.venv/`**.
+Un zip del espacio de trabajo **sin `.venv/`**, que se sube al Drive del curso.
 
 Antes de zipear: borra `.venv/`, corre `uv sync` y ejecuta cada libreta con *Restart & Run All* para comprobar que todo se reproduce desde cero.
-
-Si tus datos crudos son muy pesados, pregunta antes de entregar si van dentro del zip o si basta con el enlace de descarga y un `data/001_raw/LEEME.md` que explique cómo obtenerlos.
-
 ## Rúbrica (60 % del curso, sobre 100)
 
 | Rubro | Peso | Qué se evalúa | Dónde |
