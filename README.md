@@ -19,9 +19,7 @@ pf_<nombre>/
 ├── README.md                   # qué es el proyecto y cómo reproducirlo
 ├── data/
 │   ├── 001_raw/                # datos crudos, intactos
-│   ├── 002_intermediate/       # datos limpios (parquet), salida del ETL
-│   └── 003_results/            # conjunto de datos de resultados
-├── img/                        # figuras exportadas (png/pdf)
+│   └── 002_intermediate/       # datos limpios (parquet), salida del ETL
 ├── notebooks/
 │   ├── 001_ETL.ipynb           # importación y limpieza
 │   ├── 002_EDA.ipynb           # figuras de verificación
@@ -54,9 +52,9 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 ## Figuras y resultados
 
 - **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
-- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti:
-  - **2 figuras**, exportadas a `img/`.
-  - **1 conjunto de datos** producido con tu función, guardado en `data/003_results/`.
+- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti, que entrega una de tus funciones al ejecutarla. No hace falta guardarlos en archivos.
+  - **2 figuras**.
+  - **1 conjunto de datos** (DataFrame).
 
 ## Innovación
 
