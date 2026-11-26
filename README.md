@@ -6,7 +6,7 @@ Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al men
 
 ## Fechas
 
-- **Entrega (zip en el Drive):** _por definir._
+- **Entrega (zip en Classroom):** _por definir._
 - **Presentaciones:** _por definir._
 
 ## Estructura del espacio de trabajo (uv)
@@ -83,7 +83,7 @@ Tienes que conocer tu código lo suficiente para responder sin leerlo por primer
 
 ## Entrega
 
-Un zip del espacio de trabajo **sin `.venv/`**, que se sube al Drive del curso.
+Un zip del espacio de trabajo **sin `.venv/`**, que se sube a Classroom.
 
 Antes de zipear, borra `.venv/`.
 
