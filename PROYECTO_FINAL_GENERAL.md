@@ -21,8 +21,7 @@ pf_<nombre>/
 │   ├── 001_ETL.ipynb           # importación y limpieza
 │   ├── 002_EDA.ipynb           # figuras de verificación
 │   ├── 003_desarrollo_<funcion>.ipynb
-│   ├── 004_uso_<funcion>.ipynb # demostración de uso
-│   ├── 005_resultados.ipynb    # tus figuras o tratamientos propios (mínimo 2)
+│   ├── 004_uso_<funcion>.ipynb # demostración de uso y resultados propios (mínimo 2)
 │   └── tools/
 │       ├── __init__.py
 │       └── <modulo>.py
@@ -50,7 +49,7 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 ## Figuras
 
 - **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
-- **Figuras o tratamientos propios** (en `005_resultados`): **al menos dos**, propuestos por ti, que den un resultado: un número, una comparación o una conclusión.
+- **Figuras o tratamientos propios** (en `004_uso_<funcion>`): **al menos dos**, propuestos por ti, que den un resultado: un número, una comparación o una conclusión.
 
 ## Innovación
 
@@ -86,7 +85,7 @@ Si tus datos crudos son muy pesados, pregunta antes de entregar si van dentro de
 |---|---|---|---|
 | ETL y limpieza | 20 | `001_ETL` documentado, decisiones justificadas en Markdown, crudos intactos, datos limpios en `002_intermediate` | Repositorio |
 | Función | 25 | Corrección, docstring completo, validación del formato de entrada y reutilización con otro archivo del mismo formato | Repositorio + presentación |
-| Demostración de uso | 10 | `004` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
+| Demostración de uso | 10 | `004_uso_<funcion>` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
 | Resultados propios | 15 | Al menos 2 figuras o tratamientos, cada uno con una conclusión | Repositorio + presentación |
 | Innovación | 10 | Herramienta o técnica nueva y su justificación verbal | Presentación |
 | Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
