@@ -20,4 +20,4 @@ _Por definir._
 
 ---
 
-Los lineamientos, la estructura de entrega y la rúbrica son los mismos para todos: ver [`PROYECTO_FINAL_GENERAL.md`](../PROYECTO_FINAL_GENERAL.md).
+Los lineamientos, la estructura de entrega y la rúbrica son los mismos para todos: ver [`README.md`](../README.md).
