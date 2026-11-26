@@ -19,7 +19,8 @@ pf_<nombre>/
 ├── README.md                   # qué es el proyecto y cómo reproducirlo
 ├── data/
 │   ├── 001_raw/                # datos crudos, intactos
-│   └── 002_intermediate/       # datos limpios (parquet), salida del ETL
+│   ├── 002_intermediate/       # datos limpios (parquet), salida del ETL
+│   └── 003_results/            # resultados, si decides guardarlos
 ├── notebooks/
 │   ├── 001_ETL.ipynb           # importación y limpieza
 │   ├── 002_EDA.ipynb           # figuras de verificación
