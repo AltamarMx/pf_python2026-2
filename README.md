@@ -49,12 +49,12 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 - Lleva un docstring completo (qué hace, parámetros, qué devuelve y un ejemplo) que se pueda ver con `help()` y con `Shift+Tab`.
 - Puede usar funciones auxiliares del mismo módulo. Lo importante es poder reutilizarla con **otro archivo del mismo formato**: otra corrida, otro año, otra muestra.
 
-## Figuras y resultados
+## Resultados
 
-- **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
-- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti, que entrega una de tus funciones al ejecutarla. No hace falta guardarlos en archivos.
-  - **2 figuras**.
-  - **1 conjunto de datos** (DataFrame).
+En `004_uso_<funcion>` presentas **tres** resultados propios, propuestos por ti, que entrega una de tus funciones al ejecutarla. No hace falta guardarlos en archivos.
+
+- **2 figuras**.
+- **1 conjunto de datos** (DataFrame).
 
 ## Innovación
 
