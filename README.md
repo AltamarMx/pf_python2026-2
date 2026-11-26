@@ -34,6 +34,8 @@ pf_<nombre>/
 
 Puedes partir una etapa en varias libretas. Lo que importa es que la numeración siga el orden de lectura.
 
+Esta estructura es la mínima. Si lo crees necesario, puedes agregar otras carpetas (por ejemplo, `img/` para figuras exportadas o `docs/` para referencias).
+
 ## Reglas de trabajo (las del curso)
 
 1. Las libretas van numeradas por orden de lectura (`001_...`), sin espacios ni acentos. Cada una se entrega ejecutada de arriba abajo, en orden (*Restart & Run All*), con sus salidas.
