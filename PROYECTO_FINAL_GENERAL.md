@@ -16,16 +16,6 @@ Cada carpeta tiene su `NOMBRE.md`. La segunda mitad de esos archivos es idéntic
 
 Todos tienen la misma plantilla de entrega: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 1 innovación justificada y una presentación de 15 min.
 
-## Hallazgos en los datos que conviene comunicar antes de empezar
-
-- **Manuel:** los archivos de báscula de las corridas 1R y 2 son copias exactas (mismo MD5) de los de las corridas 1 y 3. El de la corrida 4 trae fechas de la 1R (05–06/11). Necesita los archivos correctos **antes** de analizar; si no, dos de las cinco corridas no son analizables.
-- **May:** el salto de reflectancia en ~830 nm (cambio de detector) y la T % negativa. El filtro es un pasabanda de ~650 nm.
-- **Roberto:** `utci_nodo_cercano_c` es idéntica a `utci_24.25_-110.25_c`. `utci_c` es la interpolación bilineal de los 4 nodos. Las 10 horas sin valor coinciden con huracanes (Lidia 2017, Olaf 2021, Norma 2023). Las 44 diferencias al recalcular las categorías son valores que caen justo en un umbral.
-- **German:** las coordenadas del script de Open-Meteo son las de ejemplo (Berlín) más un *bounding box* de Morelos. La descarga puede ser enorme si pide 22 variables durante 20 años.
-- **Guadalupe:** las dos pruebas tienen columnas distintas, y hay canales con un valor constante de ~1103.46 (¿desconectados?).
-- **Emiliano:** el archivo de tarifas dice "diciembre_2027", pero empieza en dic-2017.
-- **Ricardo:** 683 registros con velocidad y dirección en cero a la vez, en rachas de hasta 3.5 h.
-
 ## Rúbrica sugerida (60 % del curso, sobre 100)
 
 | Rubro | Peso | Quién lo evalúa |
@@ -37,13 +27,3 @@ Todos tienen la misma plantilla de entrega: una función reutilizable en `notebo
 | Innovación y su justificación verbal | 10 | Presentación |
 | Reproducibilidad (`uv sync` + *Run All* desde cero, rutas relativas, nombres, zip limpio) | 10 | Profesor |
 | Presentación (claridad, tiempo, respuestas a preguntas) | 10 | Presentación |
-
-## Comprobación de reproducibilidad (para el profesor)
-
-```bash
-unzip pf_nombre.zip && cd pf_nombre
-uv sync
-uv run jupyter nbconvert --to notebook --execute --inplace notebooks/*.ipynb
-```
-
-Si falla algo, el error indica qué no es reproducible: una ruta, una dependencia o el orden de ejecución.
