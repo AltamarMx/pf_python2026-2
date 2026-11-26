@@ -54,7 +54,7 @@ Puedes partir una etapa en varias libretas. Lo que importa es que la numeración
 ## Figuras y resultados
 
 - **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
-- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti, cada uno con una conclusión (un número, una comparación o una afirmación):
+- **Resultados propios** (en `004_uso_<funcion>`): **tres**, propuestos por ti:
   - **2 figuras**, exportadas a `img/`.
   - **1 conjunto de datos** producido con tu función, guardado en `data/003_results/`.
 
@@ -96,7 +96,7 @@ Antes de zipear, borra `.venv/`.
 | ETL y limpieza | 20 | `001_ETL` documentado, decisiones justificadas en Markdown, crudos intactos, datos limpios en `002_intermediate` | Repositorio |
 | Función | 25 | Corrección, docstring completo, validación del formato de entrada y reutilización con otro archivo del mismo formato | Repositorio + presentación |
 | Demostración de uso | 10 | `004_uso_<funcion>` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
-| Resultados propios | 15 | 2 figuras y 1 conjunto de datos, cada uno con una conclusión | Repositorio + presentación |
+| Resultados propios | 15 | 2 figuras y 1 conjunto de datos | Repositorio + presentación |
 | Innovación | 10 | Dos herramientas o técnicas nuevas y la justificación verbal de cada una | Presentación |
 | Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
 | Presentación | 10 | Claridad, tiempo y respuestas a las preguntas y al cuestionamiento sobre las funciones | Presentación |
