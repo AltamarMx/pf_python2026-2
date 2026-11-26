@@ -78,11 +78,7 @@ Tienes que conocer tu código lo suficiente para responder sin leerlo por primer
 
 ## Entrega
 
-Un zip del espacio de trabajo **sin `.venv/`**:
-
-```bash
-zip -r pf_<nombre>.zip pf_<nombre> -x "*/.venv/*" "*/.ipynb_checkpoints/*" "*/__pycache__/*" "*.DS_Store"
-```
+Un zip del espacio de trabajo **sin `.venv/`**.
 
 Antes de zipear: borra `.venv/`, corre `uv sync` y ejecuta cada libreta con *Restart & Run All* para comprobar que todo se reproduce desde cero.
 
