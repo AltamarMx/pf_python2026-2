@@ -67,6 +67,15 @@ La presentación trata de **las funciones**, no de la limpieza; la limpieza la r
 
 Lleva la demostración ya ejecutada por si algo falla en vivo.
 
+**Durante la presentación puedo intervenir para cuestionar tus funciones.** Por ejemplo, puedo pedirte que:
+
+- expliques qué hace una línea o un bloque concreto del código;
+- cambies un parámetro y anticipes qué va a pasar antes de ejecutarla;
+- la llames con otro archivo del mismo formato o con datos mal formados, para ver cómo valida la entrada;
+- justifiques por qué la escribiste así y no de otra forma.
+
+Tienes que conocer tu código lo suficiente para responder sin leerlo por primera vez.
+
 ## Entrega
 
 Un zip del espacio de trabajo **sin `.venv/`**:
@@ -89,4 +98,4 @@ Si tus datos crudos son muy pesados, pregunta antes de entregar si van dentro de
 | Resultados propios | 15 | Al menos 2 figuras o tratamientos, cada uno con una conclusión | Repositorio + presentación |
 | Innovación | 10 | Dos herramientas o técnicas nuevas y la justificación verbal de cada una | Presentación |
 | Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
-| Presentación | 10 | Claridad, tiempo y respuestas a preguntas | Presentación |
+| Presentación | 10 | Claridad, tiempo y respuestas a las preguntas y al cuestionamiento sobre las funciones | Presentación |
