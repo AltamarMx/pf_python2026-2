@@ -1,29 +1,93 @@
-# Proyecto final, Python 2027-1: visión general (documento del profesor)
+# Proyecto final, Python 2027-1: lineamientos y rúbrica
 
-Cada carpeta tiene su `NOMBRE.md`. La segunda mitad de esos archivos es idéntica para todos (estructura, reglas, función, figuras, innovación, presentación y entrega). La primera mitad describe los datos y el proyecto de cada persona.
+Estos lineamientos y la rúbrica son iguales para todos. Cada persona tiene una carpeta con su `NOMBRE.md`, que resume sus datos y el objetivo de su proyecto.
 
-## Resumen y equilibrio
+Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 1 innovación justificada y una presentación de 15 min.
 
-| Persona | Datos | Función central | Carga de limpieza | Carga de la función | Cómo se compensa |
-|---|---|---|---|---|---|
-| Emiliano | Tarifas CFE/CRE (70 mil filas) + consumo nacional mensual | `calcula_factura` | Media (formato largo, meses en texto, divisiones) | Media | Alcance limitado a tarifas sin periodo horario; GDMTH opcional |
-| German | SCADA de 4 turbinas (~850 mil filas, 260 MB) + API de Open-Meteo | `curva_potencia` + `energia_esperada` | Media-alta (volumen, F95/F99, API) | Media | Puede desarrollar con una sola turbina |
-| Guadalupe | 2 pruebas de 24 h en cámara climática (LabVIEW) | `respuesta_termica` | Alta (encabezados distintos, metadatos, hora "p. m.", época 1904) | Media | La función opera sobre nombres estándar |
-| Manuel | Secador solar: 5 corridas × 3 tipos de archivo | `cinetica_secado` | **Muy alta** (formatos mezclados, encabezados repetidos, **archivos duplicados**) | Media | Las importadoras son limpieza, no se presentan |
-| May | Espectros R/T de 2 muestras + filtro + 2 fotocorrientes | `banda_prohibida` + `fotorrespuesta` | Baja-media (salto del detector, T negativa) | **Alta** (dos funciones) | Lleva dos funciones |
-| Ricardo | Anemometría de La Ventosa 2015, 10 min, 2 alturas | `caracteriza_viento` + `exponente_cizalla` | Media (convención de tiempo, ceros) | Media | — |
-| Roberto | UTCI horario de La Paz 2017–2025, 4 nodos | `episodios_estres` | Baja (datos casi limpios) | Media-alta (detección vectorizada de episodios) | Validación de categorías y nodos; la función tiene más peso |
+## Estructura del espacio de trabajo (uv)
 
-Todos tienen la misma plantilla de entrega: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 1 innovación justificada y una presentación de 15 min.
+```
+pf_<nombre>/
+├── .python-version
+├── pyproject.toml              # dependencias agregadas con `uv add`
+├── uv.lock
+├── README.md                   # qué es el proyecto y cómo reproducirlo
+├── data/
+│   ├── 001_raw/                # datos crudos, intactos
+│   ├── 002_intermediate/       # datos limpios (parquet), salida del ETL
+│   └── 003_results/            # tablas de resultados
+├── img/                        # figuras exportadas (png/pdf)
+├── notebooks/
+│   ├── 001_ETL.ipynb           # importación y limpieza
+│   ├── 002_EDA.ipynb           # figuras de verificación
+│   ├── 003_desarrollo_<funcion>.ipynb
+│   ├── 004_uso_<funcion>.ipynb # demostración de uso
+│   ├── 005_resultados.ipynb    # tus figuras o tratamientos propios (mínimo 2)
+│   └── tools/
+│       ├── __init__.py
+│       └── <modulo>.py
+└── presentacion/               # diapositivas (pdf o html)
+```
 
-## Rúbrica sugerida (60 % del curso, sobre 100)
+Puedes partir una etapa en varias libretas. Lo que importa es que la numeración siga el orden de lectura.
 
-| Rubro | Peso | Quién lo evalúa |
-|---|---|---|
-| ETL y limpieza documentada (`001_ETL`, decisiones justificadas, crudos intactos) | 20 | Profesor, en el repositorio |
-| Función: corrección, docstring, validación del formato y reutilización con otro archivo | 25 | Repositorio + presentación |
-| Demostración de uso (`004`) | 10 | Repositorio + presentación |
-| Al menos 2 resultados propios (figuras o tratamientos con una conclusión) | 15 | Repositorio + presentación |
-| Innovación y su justificación verbal | 10 | Presentación |
-| Reproducibilidad (`uv sync` + *Run All* desde cero, rutas relativas, nombres, zip limpio) | 10 | Profesor |
-| Presentación (claridad, tiempo, respuestas a preguntas) | 10 | Presentación |
+## Reglas de trabajo (las del curso)
+
+1. Las libretas van numeradas por orden de lectura (`001_...`), sin espacios ni acentos. Cada una se entrega ejecutada de arriba abajo, en orden (*Restart & Run All*), con sus salidas.
+2. Usa siempre rutas relativas (`../data/001_raw/...`), nunca rutas absolutas.
+3. Los paquetes se agregan con `uv add`, nunca con `pip install` desde la libreta. Con `uv sync` debe bastar para reproducir el entorno.
+4. Los datos crudos no se tocan. El ETL escribe en `data/002_intermediate/`.
+5. Una libreta, una pregunta. Escribe en Markdown por qué tomaste cada decisión.
+
+## La función: el centro del proyecto
+
+- Vive en `notebooks/tools/<modulo>.py` y se importa con `from tools.<modulo> import <funcion>`.
+- **Supone que los datos siempre tienen el formato limpio que produce `001_ETL`.** El docstring describe ese formato: índice, nombres de columnas y unidades. Si la función recibe algo distinto, debe fallar con un mensaje claro (`raise ValueError("...")`), no con un error críptico de pandas.
+- Devuelve un resultado (DataFrame, Serie, diccionario…), no sólo una figura. Graficar es opcional: un argumento `grafica=True` o una función aparte.
+- Lleva un docstring completo (qué hace, parámetros, qué devuelve y un ejemplo) que se pueda ver con `help()` y con `Shift+Tab`.
+- Puede usar funciones auxiliares del mismo módulo. Lo importante es poder reutilizarla con **otro archivo del mismo formato**: otra corrida, otro año, otra muestra.
+
+## Figuras
+
+- **Figuras de verificación** (en `002_EDA`): comprueban que los datos se importaron bien y se comportan como se espera. No cuentan como resultado.
+- **Figuras o tratamientos propios** (en `005_resultados`): **al menos dos**, propuestos por ti, que den un resultado: un número, una comparación o una conclusión.
+
+## Innovación
+
+Incluye al menos una herramienta o técnica que no se haya visto en el curso, **y justifícala**. En la presentación tienes que explicar qué problema resuelve en tu proyecto y por qué conviene más que lo visto en clase. Si eliges el tipado de funciones (*type hints*), debes saber explicar qué hace y qué no hace: Python no lo verifica al ejecutar; sirve para documentar, para el autocompletado del editor y para revisar el código con herramientas como `mypy` o `pyright`.
+
+## Presentación (15 minutos)
+
+La presentación trata de **las funciones**, no de la limpieza; la limpieza la reviso yo en el repositorio. Distribución sugerida:
+
+- 2 min: contexto y datos.
+- 7 min: la función (qué recibe, qué devuelve, demostración).
+- 3 min: resultados.
+- 2 min: innovación y su justificación.
+- 1 min: cierre.
+
+Lleva la demostración ya ejecutada por si algo falla en vivo.
+
+## Entrega
+
+Un zip del espacio de trabajo **sin `.venv/`**:
+
+```bash
+zip -r pf_<nombre>.zip pf_<nombre> -x "*/.venv/*" "*/.ipynb_checkpoints/*" "*/__pycache__/*" "*.DS_Store"
+```
+
+Antes de zipear: borra `.venv/`, corre `uv sync` y ejecuta cada libreta con *Restart & Run All* para comprobar que todo se reproduce desde cero.
+
+Si tus datos crudos son muy pesados, pregunta antes de entregar si van dentro del zip o si basta con el enlace de descarga y un `data/001_raw/LEEME.md` que explique cómo obtenerlos.
+
+## Rúbrica (60 % del curso, sobre 100)
+
+| Rubro | Peso | Qué se evalúa | Dónde |
+|---|---|---|---|
+| ETL y limpieza | 20 | `001_ETL` documentado, decisiones justificadas en Markdown, crudos intactos, datos limpios en `002_intermediate` | Repositorio |
+| Función | 25 | Corrección, docstring completo, validación del formato de entrada y reutilización con otro archivo del mismo formato | Repositorio + presentación |
+| Demostración de uso | 10 | `004` muestra con claridad qué recibe y qué devuelve la función | Repositorio + presentación |
+| Resultados propios | 15 | Al menos 2 figuras o tratamientos, cada uno con una conclusión | Repositorio + presentación |
+| Innovación | 10 | Herramienta o técnica nueva y su justificación verbal | Presentación |
+| Reproducibilidad | 10 | `uv sync` + *Run All* desde cero, rutas relativas, nombres de archivo, zip limpio | Profesor |
+| Presentación | 10 | Claridad, tiempo y respuestas a preguntas | Presentación |
