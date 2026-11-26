@@ -59,7 +59,7 @@ Incluye al menos **dos** herramientas o técnicas que no se hayan visto en el cu
 
 La presentación trata de **las funciones**, no de la limpieza; la limpieza la reviso yo en el repositorio. Distribución sugerida:
 
-- 2 min: contexto y datos.
+- 2 min: **objetivo** (el que definiste en tu `NOMBRE.md`), contexto y datos. La presentación empieza por el objetivo.
 - 7 min: la función (qué recibe, qué devuelve, demostración).
 - 3 min: resultados.
 - 2 min: innovaciones y su justificación.
