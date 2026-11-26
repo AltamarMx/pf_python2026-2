@@ -4,6 +4,11 @@ Estos lineamientos y la rúbrica son iguales para todos. Cada persona tiene una 
 
 Todos entregan lo mismo: una función reutilizable en `notebooks/tools/`, al menos 2 resultados propios, al menos 2 innovaciones justificadas y una presentación de 15 min.
 
+## Fechas
+
+- **Entrega (zip en el Drive):** _por definir._
+- **Presentaciones:** _por definir._
+
 ## Estructura del espacio de trabajo (uv)
 
 ```
